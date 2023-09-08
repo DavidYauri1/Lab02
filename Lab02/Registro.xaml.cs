@@ -10,28 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Lab02
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para Registro.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Registro : Window
     {
-        public MainWindow()
+        public Registro()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 window1 = new Window1();
-            this.Close();
-            window1.Show();
-        }
-
-       
     }
 }

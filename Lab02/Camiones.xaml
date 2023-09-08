@@ -1,0 +1,33 @@
+﻿<Window x:Class="Lab02.Camiones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab02"
+        mc:Ignorable="d"
+        Title="Camiones" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <StackPanel Margin="20">
+               
+
+
+                <TextBlock Text="Peso Maximo" Width="202" />
+                <TextBox x:Name="txtEmail" Width="200" Margin="0,5,0,10"   />
+
+                <TextBlock Text="Placa" Width="202" />
+                <TextBox x:Name="txtPlaca" Width="200" Margin="0,5,0,10"   />
+
+                <TextBlock Text="Peso vaio:" Width="202" />
+                <TextBox x:Name="txtPeso" Width="200" Margin="0,5,0,10"   />
+
+
+
+
+
+
+                <Button Content="Enviar"  Width="209" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

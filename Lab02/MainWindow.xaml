@@ -6,8 +6,129 @@
         xmlns:local="clr-namespace:Lab02"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="432,289,0,0" VerticalAlignment="Top"/>
+    <StackPanel Width="220"
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="0,35,0,0"                           
+                >
 
-    </Grid>
+        <TextBlock Text="RJ CODE"
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Primer Login en WPF"
+                               Foreground="black"
+                               FontSize="18"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+
+        <TextBlock x:Name="txtUser"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,35,0,0"/>
+
+        <TextBox 
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="Black"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="20,0,0,0" >
+
+            
+        </TextBox>
+
+        <TextBlock Text="Password"
+                               x:Name="txtPass"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"                             
+                               Margin="0,15,0,0"/>
+
+        <PasswordBox 
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                            
+                            
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="20,0,0,0" >
+
+            
+        </PasswordBox>
+
+        <Button x:Name="btnLogin"                          
+                            BorderThickness="0"
+                            Content="LOG IN"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="0,50,0,0"
+                            Click="Button_Click"  
+                           >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="150" Height="40"
+                                        
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,15,0,0">
+
+            <TextBlock Text="Forgot Password?"
+                               Foreground="DarkGray"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"/>
+
+            <TextBlock Text="Reset"
+                               Foreground="White"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               Cursor="Hand"
+                               Margin="8,0,0,0"/>
+
+        </StackPanel>
+
+    </StackPanel>
 </Window>

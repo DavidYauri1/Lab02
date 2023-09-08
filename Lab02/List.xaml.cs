@@ -10,28 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Lab02
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para List.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class List : Window
     {
-        public MainWindow()
+        public List()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+            List<Conductores> personas = new List<Conductores>
         {
-            Window1 window1 = new Window1();
-            this.Close();
-            window1.Show();
+            new Conductores { Nombre = "Juan" },
+            new Conductores { Nombre = "María" },
+            new Conductores { Nombre = "Pedro" }
+        };
+            lstNombres.ItemsSource = personas;
         }
-
-       
     }
 }
